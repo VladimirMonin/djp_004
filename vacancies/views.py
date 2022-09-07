@@ -68,6 +68,8 @@ class VacancyDetailView(DetailView):  # Специализированный к�
         return JsonResponse(
             {
                 'id': vacancy.id,
-                'text': vacancy.text
+                'text': vacancy.text,
+                'status': vacancy.status,
+                'created': vacancy.created,
             }
             , safe=False, json_dumps_params={'ensure_ascii': False})
